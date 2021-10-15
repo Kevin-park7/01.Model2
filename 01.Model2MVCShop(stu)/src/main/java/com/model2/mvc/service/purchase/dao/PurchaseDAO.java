@@ -224,7 +224,7 @@ public void insertPurchase(PurchaseVO purchaseVO) throws Exception {
 	Connection con = DBUtil.getConnection();
 
 String sql = "insert into transaction values  "
-		+ "(seq_transaction_tran_no.nextval,?,?,?,?,?,?,?,001,sysdate,?)";
+		+ "(seq_transaction_tran_no.nextval,?,?,?,?,?,?,?,'001',sysdate,?)";
 	
 	PreparedStatement stmt = con.prepareStatement(sql);
 	stmt.setInt(1, purchaseVO.getTranNo());

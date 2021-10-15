@@ -184,7 +184,7 @@
 					:<%=vo.getProTranCode()%>:
 					<%if(vo.getProTranCode()==null) {%>
 					제고있음
-					<%}else if (vo.getProTranCode().equals("001")){%>
+					<%}else if (vo.getProTranCode().equals("1  ")){%>
 					구매 완료 
 					<%} %>
 						<%System.out.println(vo.getProTranCode());
@@ -194,11 +194,12 @@
 						배송중 조그만기달려!!
 						<%}else if(vo.getProTranCode().equals("001")){ %>
 						<a href="/updateTranCodeByProd.do?prodNo=<%=vo.getProdNo() %>&tranCode=002">배송하기
+						</a>
 						<%}else if(vo.getProTranCode().equals("003")){ %>
 						문앞 확인바람
 						<%} %>
 						
-						</a>
+						
 
 					</td>
 				</tr>

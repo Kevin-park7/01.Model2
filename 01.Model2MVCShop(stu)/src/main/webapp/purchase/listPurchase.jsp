@@ -118,16 +118,21 @@
 				
 				if(vo.getTranCode().equals("1  ")){%>
 					구매완료
-				<%}else if(vo.getTranCode().equals("2  ")) {%>
+				<%}else if(vo.getTranCode().equals("002")) {%>
 					판매중
-				<%}else if(vo.getTranCode().equals("3  ")) {%>
+				<%}else if(vo.getTranCode().equals("003")) {%>
 					배송완료 
 				<%}else%>
 					
 				상태 입니다.</td>
-		<td></td>
+				
+		<td>
+		 
+		 </td>
 		<td align="left">
-			
+			<%if(vo.getTranCode().equals("002")){ %><a href="/updateTranCode.do?tranNo=<%=vo.getTranNo() %>&tranCode=003">상품도착
+			</a>
+		 <%} %>
 		</td>
 	</tr>
 	<tr>
