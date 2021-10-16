@@ -391,9 +391,15 @@
 					<td align="left"><%=vo.getRegDate() %></td>
 					<td></td>
 					<td align="left">
-					
-						재고 없음
-					
+						<%if(vo.getProTranCode()==null){ %>
+						재고 있음
+						<%}else if(vo.getProTranCode().equals("001")){ %>
+						구매완료
+						<%}else if(vo.getProTranCode().equals("002")){ %>
+						배송중
+						<%}else if(vo.getProTranCode().equals("003")){ %>
+						배송완료
+						<%} %>
 					</td>	
 				</tr>
 				<tr>
